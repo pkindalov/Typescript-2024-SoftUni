@@ -1,0 +1,1 @@
+Exercises, notes, homeworks etc... from the Typescript course in SoftUni
