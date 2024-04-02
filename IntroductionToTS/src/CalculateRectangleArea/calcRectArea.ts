@@ -2,7 +2,8 @@
    which will represent length and width of the rectangle. Calculate and print the area of the rectangle.
 */
 
-const calcRectArea = (length: number, whidth: number):number => length * whidth;
+const calcRectArea = (length: number, whidth: number): number =>
+  length * whidth;
 
 console.log(calcRectArea(5, 7));
 console.log(calcRectArea(6, 8));
