@@ -37,7 +37,7 @@ const mathOperations = (num1, num2, operation) => {
 const doMath = () => {
     try {
         console.log(mathOperations(5, 6, "+"));
-        console.log(mathOperations(3, 5.5, '*'));
+        console.log(mathOperations(3, 5.5, "*"));
     }
     catch (error) {
         if (error instanceof Error) {
