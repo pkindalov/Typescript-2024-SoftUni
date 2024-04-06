@@ -15,7 +15,6 @@ const fillProducts = (data: string[]): CalorieObj[] => {
       };
 
       products.push(calorieObj);
-      //   console.log(`{${calorieObj.name} }`);
     }
   });
 
@@ -23,15 +22,10 @@ const fillProducts = (data: string[]): CalorieObj[] => {
 };
 
 const printingProducts = (products: CalorieObj[]): void => {
-  let finalString: string | null = "{ ";
-  products.forEach((product: CalorieObj, index: number) => {
-    if (index < products.length - 1) {
-      finalString += `${product.name}: ${product.calories}, `;
-    } else {
-      finalString += `${product.name}: ${product.calories}`;
-    }
-  });
-  finalString += " }";
+  const productStrings = products.map(
+    (product: CalorieObj) => `${product.name}: ${product.calories}`
+  );
+  const finalString = `{ ${productStrings.join(", ")} }`;
   console.log(finalString);
 };
 
