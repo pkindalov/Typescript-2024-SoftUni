@@ -4,21 +4,21 @@ interface Town {
   longitude: number;
 }
 
-interface processTownsFn {
+interface ProcessTownsFn {
   (data: string[]): void;
 }
 
-interface printTownsFn {
+interface PrintTownsFn {
   (data: Town[]): void;
 }
 
-const printTowns: printTownsFn = (towns: Town[]) => {
+const printTowns: PrintTownsFn = (towns: Town[]) => {
   towns.forEach((town: Town) => {
     console.log(town);
   });
 };
 
-const processTowns: processTownsFn = (data: string[]) => {
+const processTowns: ProcessTownsFn = (data: string[]) => {
   const townsData: Town[] = [];
   data.forEach((townRowStr: string) => {
     const data = townRowStr.split("|").map((str: string) => str.trim());

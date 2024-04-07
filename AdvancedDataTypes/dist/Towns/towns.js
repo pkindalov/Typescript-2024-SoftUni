@@ -10,8 +10,8 @@ const processTowns = (data) => {
         const data = townRowStr.split("|").map((str) => str.trim());
         const town = {
             town: data[0],
-            latitude: +(parseFloat(data[1]).toFixed(2)),
-            longitude: +(parseFloat(data[2]).toFixed(2)),
+            latitude: +parseFloat(data[1]).toFixed(2),
+            longitude: +parseFloat(data[2]).toFixed(2),
         };
         townsData.push(town);
     });
